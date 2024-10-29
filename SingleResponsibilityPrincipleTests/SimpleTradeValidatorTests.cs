@@ -114,7 +114,7 @@ namespace SingleResponsibilityPrinciple.Tests
             //Arrange
             var logger = new ConsoleLogger();
             var tradeValidator = new SimpleTradeValidator(logger);
-            string[] strData = { "AAABBB", "1000000", "1.00" };
+            string[] strData = { "AAABBB", "100000", "1.00" };
 
             //Act
             bool result = tradeValidator.Validate(strData);
@@ -128,7 +128,7 @@ namespace SingleResponsibilityPrinciple.Tests
             //Arrange
             var logger = new ConsoleLogger();
             var tradeValidator = new SimpleTradeValidator(logger);
-            string[] strData = { "AAABBB", "1000001", "1.00" };
+            string[] strData = { "AAABBB", "100001", "1.00" };
 
             //Act
             bool result = tradeValidator.Validate(strData);
