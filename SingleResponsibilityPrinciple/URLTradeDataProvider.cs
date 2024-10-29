@@ -42,7 +42,7 @@ namespace SingleResponsibilityPrinciple
             catch (Exception ex)
             {
                 _logger.LogWarning($"Error reading trade data from URL: {_url}. Exception: {ex.Message}");
-                throw;
+                throw new IOException();
             }
 
             return tradeData;
