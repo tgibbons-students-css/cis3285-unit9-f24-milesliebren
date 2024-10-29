@@ -9,6 +9,11 @@ namespace SingleResponsibilityPrinciple
     {
         private readonly string logFilePath;
 
+        public ConsoleLogger()
+        {
+            this.logFilePath = "TempLogFilePath.txt";
+        }
+
         public ConsoleLogger(string logFilePath)
         {
             this.logFilePath = logFilePath ?? throw new ArgumentNullException(nameof(logFilePath));

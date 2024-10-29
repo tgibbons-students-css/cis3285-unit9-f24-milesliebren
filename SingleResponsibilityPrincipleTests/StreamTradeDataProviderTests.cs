@@ -25,9 +25,8 @@ namespace SingleResponsibilityPrinciple.Tests
         public void TestSize1()
         {
             //Arrange
-            ILogger logger = new ConsoleLogger();
-            String fileName = "SingleResponsibilityPrincipleTests.trades_1good.txt";
-            Stream tradeStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
+            ILogger logger = new ConsoleLogger("TestSize1.txt");
+            Stream tradeStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SingleResponsibilityPrincipleTests.trades_1good.txt");
 
             ITradeDataProvider tradeProvider = new StreamTradeDataProvider(tradeStream, logger);
 
@@ -42,9 +41,8 @@ namespace SingleResponsibilityPrinciple.Tests
         public void TestSize5()
         {
             //Arrange
-            ILogger logger = new ConsoleLogger();
-            String fileName = "SingleResponsibilityPrincipleTests.trades_5good.txt";
-            Stream tradeStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
+            ILogger logger = new ConsoleLogger("TestSize5.txt");
+            Stream tradeStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SingleResponsibilityPrincipleTests.trades_5good.txt");
 
             ITradeDataProvider tradeProvider = new StreamTradeDataProvider(tradeStream, logger);
 

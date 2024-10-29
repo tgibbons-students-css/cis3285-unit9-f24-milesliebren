@@ -23,7 +23,7 @@ namespace SingleResponsibilityPrinciple.Tests
         public void TestSize1()
         {
             //Arrange
-            ILogger logger = new ConsoleLogger();
+            ILogger logger = new ConsoleLogger("TestSize1.txt");
             string tradeURL = " https://raw.githubusercontent.com/tgibbons-css/CIS3285_Unit9_F24/refs/heads/master/SingleResponsibilityPrinciple/trades.txt";
 
             ITradeDataProvider tradeProvider = new URLTradeDataProvider(tradeURL, logger);
